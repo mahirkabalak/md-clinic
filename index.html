@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MD Clinic Ankara</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="MD Clinic — Radyoloji ve Girişimsel Radyoloji. Memorial Ankara Hastanesi yanı, Balgat. Kliniği 3D olarak gezin.">
+<meta name="theme-color" content="#0f0e0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Cinzel:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style> .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container, .leaflet-pane > svg, .leaflet-pane > canvas, .leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer { position: absolute; left: 0; top: 0; } .leaflet-container { overflow: hidden; } .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow { -webkit-user-select: none; -moz-user-select: none; user-select: none; -webkit-user-drag: none; } .leaflet-tile::selection { background: transparent; } .leaflet-safari .leaflet-tile { image-rendering: -webkit-optimize-contrast; } .leaflet-safari .leaflet-tile-container { width: 1600px; height: 1600px; -webkit-transform-origin: 0 0; } .leaflet-marker-icon, .leaflet-marker-shadow { display: block; } .leaflet-container .leaflet-overlay-pane svg { max-width: none !important; max-height: none !important; } .leaflet-container .leaflet-marker-pane img, .leaflet-container .leaflet-shadow-pane img, .leaflet-container .leaflet-tile-pane img, .leaflet-container img.leaflet-image-layer, .leaflet-container .leaflet-tile { max-width: none !important; max-height: none !important; width: auto; padding: 0; } .leaflet-container img.leaflet-tile { mix-blend-mode: plus-lighter; } .leaflet-container.leaflet-touch-zoom { -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; } .leaflet-container.leaflet-touch-drag { -ms-touch-action: pinch-zoom; touch-action: none; touch-action: pinch-zoom; } .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom { -ms-touch-action: none; touch-action: none; } .leaflet-container { -webkit-tap-highlight-color: transparent; } .leaflet-container a { -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4); } .leaflet-tile { filter: inherit; visibility: hidden; } .leaflet-tile-loaded { visibility: inherit; } .leaflet-zoom-box { width: 0; height: 0; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 800; } .leaflet-overlay-pane svg { -moz-user-select: none; } .leaflet-pane { z-index: 400; } .leaflet-tile-pane { z-index: 200; } .leaflet-overlay-pane { z-index: 400; } .leaflet-shadow-pane { z-index: 500; } .leaflet-marker-pane { z-index: 600; } .leaflet-tooltip-pane { z-index: 650; } .leaflet-popup-pane { z-index: 700; } .leaflet-map-pane canvas { z-index: 100; } .leaflet-map-pane svg { z-index: 200; } .leaflet-vml-shape { width: 1px; height: 1px; } .lvml { behavior: url(#default#VML); display: inline-block; position: absolute; } .leaflet-control { position: relative; z-index: 800; pointer-events: visiblePainted; pointer-events: auto; } .leaflet-top, .leaflet-bottom { position: absolute; z-index: 1000; pointer-events: none; } .leaflet-top { top: 0; } .leaflet-right { right: 0; } .leaflet-bottom { bottom: 0; } .leaflet-left { left: 0; } .leaflet-control { float: left; clear: both; } .leaflet-right .leaflet-control { float: right; } .leaflet-top .leaflet-control { margin-top: 10px; } .leaflet-bottom .leaflet-control { margin-bottom: 10px; } .leaflet-left .leaflet-control { margin-left: 10px; } .leaflet-right .leaflet-control { margin-right: 10px; } .leaflet-fade-anim .leaflet-popup { opacity: 0; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; transition: opacity 0.2s linear; } .leaflet-fade-anim .leaflet-map-pane .leaflet-popup { opacity: 1; } .leaflet-zoom-animated { -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; } svg.leaflet-zoom-animated { will-change: transform; } .leaflet-zoom-anim .leaflet-zoom-animated { -webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1); -moz-transition: -moz-transform 0.25s cubic-bezier(0,0,0.25,1); transition: transform 0.25s cubic-bezier(0,0,0.25,1); } .leaflet-zoom-anim .leaflet-tile, .leaflet-pan-anim .leaflet-tile { -webkit-transition: none; -moz-transition: none; transition: none; } .leaflet-zoom-anim .leaflet-zoom-hide { visibility: hidden; } .leaflet-interactive { cursor: pointer; } .leaflet-grab { cursor: -webkit-grab; cursor: -moz-grab; cursor: grab; } .leaflet-crosshair, .leaflet-crosshair .leaflet-interactive { cursor: crosshair; } .leaflet-popup-pane, .leaflet-control { cursor: auto; } .leaflet-dragging .leaflet-grab, .leaflet-dragging .leaflet-grab .leaflet-interactive, .leaflet-dragging .leaflet-marker-draggable { cursor: move; cursor: -webkit-grabbing; cursor: -moz-grabbing; cursor: grabbing; } .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-image-layer, .leaflet-pane > svg path, .leaflet-tile-container { pointer-events: none; } .leaflet-marker-icon.leaflet-interactive, .leaflet-image-layer.leaflet-interactive, .leaflet-pane > svg path.leaflet-interactive, svg.leaflet-image-layer.leaflet-interactive path { pointer-events: visiblePainted; pointer-events: auto; } .leaflet-container { background: #ddd; outline-offset: 1px; } .leaflet-container a { color: #0078A8; } .leaflet-zoom-box { border: 2px dotted #38f; background: rgba(255,255,255,0.5); } .leaflet-container { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 12px; font-size: 0.75rem; line-height: 1.5; } .leaflet-bar { box-shadow: 0 1px 5px rgba(0,0,0,0.65); border-radius: 4px; } .leaflet-bar a { background-color: #fff; border-bottom: 1px solid #ccc; width: 26px; height: 26px; line-height: 26px; display: block; text-align: center; text-decoration: none; color: black; } .leaflet-bar a, .leaflet-control-layers-toggle { background-position: 50% 50%; background-repeat: no-repeat; display: block; } .leaflet-bar a:hover, .leaflet-bar a:focus { background-color: #f4f4f4; } .leaflet-bar a:first-child { border-top-left-radius: 4px; border-top-right-radius: 4px; } .leaflet-bar a:last-child { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: none; } .leaflet-bar a.leaflet-disabled { cursor: default; background-color: #f4f4f4; color: #bbb; } .leaflet-touch .leaflet-bar a { width: 30px; height: 30px; line-height: 30px; } .leaflet-touch .leaflet-bar a:first-child { border-top-left-radius: 2px; border-top-right-radius: 2px; } .leaflet-touch .leaflet-bar a:last-child { border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; } .leaflet-control-zoom-in, .leaflet-control-zoom-out { font: bold 18px 'Lucida Console', Monaco, monospace; text-indent: 1px; } .leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out { font-size: 22px; } .leaflet-control-layers { box-shadow: 0 1px 5px rgba(0,0,0,0.4); background: #fff; border-radius: 5px; } .leaflet-control-layers-toggle { background-image: url(images/layers.png); width: 36px; height: 36px; } .leaflet-retina .leaflet-control-layers-toggle { background-image: url(images/layers-2x.png); background-size: 26px 26px; } .leaflet-touch .leaflet-control-layers-toggle { width: 44px; height: 44px; } .leaflet-control-layers .leaflet-control-layers-list, .leaflet-control-layers-expanded .leaflet-control-layers-toggle { display: none; } .leaflet-control-layers-expanded .leaflet-control-layers-list { display: block; position: relative; } .leaflet-control-layers-expanded { padding: 6px 10px 6px 6px; color: #333; background: #fff; } .leaflet-control-layers-scrollbar { overflow-y: scroll; overflow-x: hidden; padding-right: 5px; } .leaflet-control-layers-selector { margin-top: 2px; position: relative; top: 1px; } .leaflet-control-layers label { display: block; font-size: 13px; font-size: 1.08333em; } .leaflet-control-layers-separator { height: 0; border-top: 1px solid #ddd; margin: 5px -10px 5px -6px; } .leaflet-default-icon-path { background-image: url(images/marker-icon.png); } .leaflet-container .leaflet-control-attribution { background: #fff; background: rgba(255, 255, 255, 0.8); margin: 0; } .leaflet-control-attribution, .leaflet-control-scale-line { padding: 0 5px; color: #333; line-height: 1.4; } .leaflet-control-attribution a { text-decoration: none; } .leaflet-control-attribution a:hover, .leaflet-control-attribution a:focus { text-decoration: underline; } .leaflet-attribution-flag { display: inline !important; vertical-align: baseline !important; width: 1em; height: 0.6669em; } .leaflet-left .leaflet-control-scale { margin-left: 5px; } .leaflet-bottom .leaflet-control-scale { margin-bottom: 5px; } .leaflet-control-scale-line { border: 2px solid #777; border-top: none; line-height: 1.1; padding: 2px 5px 1px; white-space: nowrap; -moz-box-sizing: border-box; box-sizing: border-box; background: rgba(255, 255, 255, 0.8); text-shadow: 1px 1px #fff; } .leaflet-control-scale-line:not(:first-child) { border-top: 2px solid #777; border-bottom: none; margin-top: -2px; } .leaflet-control-scale-line:not(:first-child):not(:last-child) { border-bottom: 2px solid #777; } .leaflet-touch .leaflet-control-attribution, .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar { box-shadow: none; } .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar { border: 2px solid rgba(0,0,0,0.2); background-clip: padding-box; } .leaflet-popup { position: absolute; text-align: center; margin-bottom: 20px; } .leaflet-popup-content-wrapper { padding: 1px; text-align: left; border-radius: 12px; } .leaflet-popup-content { margin: 13px 24px 13px 20px; line-height: 1.3; font-size: 13px; font-size: 1.08333em; min-height: 1px; } .leaflet-popup-content p { margin: 17px 0; margin: 1.3em 0; } .leaflet-popup-tip-container { width: 40px; height: 20px; position: absolute; left: 50%; margin-top: -1px; margin-left: -20px; overflow: hidden; pointer-events: none; } .leaflet-popup-tip { width: 17px; height: 17px; padding: 1px; margin: -10px auto 0; pointer-events: auto; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); } .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: white; color: #333; box-shadow: 0 3px 14px rgba(0,0,0,0.4); } .leaflet-container a.leaflet-popup-close-button { position: absolute; top: 0; right: 0; border: none; text-align: center; width: 24px; height: 24px; font: 16px/24px Tahoma, Verdana, sans-serif; color: #757575; text-decoration: none; background: transparent; } .leaflet-container a.leaflet-popup-close-button:hover, .leaflet-container a.leaflet-popup-close-button:focus { color: #585858; } .leaflet-popup-scrolled { overflow: auto; } .leaflet-oldie .leaflet-popup-content-wrapper { -ms-zoom: 1; } .leaflet-oldie .leaflet-popup-tip { width: 24px; margin: 0 auto; -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)"; filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678); } .leaflet-oldie .leaflet-control-zoom, .leaflet-oldie .leaflet-control-layers, .leaflet-oldie .leaflet-popup-content-wrapper, .leaflet-oldie .leaflet-popup-tip { border: 1px solid #999; } .leaflet-div-icon { background: #fff; border: 1px solid #666; } .leaflet-tooltip { position: absolute; padding: 6px; background-color: #fff; border: 1px solid #fff; border-radius: 3px; color: #222; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; box-shadow: 0 1px 3px rgba(0,0,0,0.4); } .leaflet-tooltip.leaflet-interactive { cursor: pointer; pointer-events: auto; } .leaflet-tooltip-top:before, .leaflet-tooltip-bottom:before, .leaflet-tooltip-left:before, .leaflet-tooltip-right:before { position: absolute; pointer-events: none; border: 6px solid transparent; background: transparent; content: ""; } .leaflet-tooltip-bottom { margin-top: 6px; } .leaflet-tooltip-top { margin-top: -6px; } .leaflet-tooltip-bottom:before, .leaflet-tooltip-top:before { left: 50%; margin-left: -6px; } .leaflet-tooltip-top:before { bottom: 0; margin-bottom: -12px; border-top-color: #fff; } .leaflet-tooltip-bottom:before { top: 0; margin-top: -12px; margin-left: -6px; border-bottom-color: #fff; } .leaflet-tooltip-left { margin-left: -6px; } .leaflet-tooltip-right { margin-left: 6px; } .leaflet-tooltip-left:before, .leaflet-tooltip-right:before { top: 50%; margin-top: -6px; } .leaflet-tooltip-left:before { right: 0; margin-right: -12px; border-left-color: #fff; } .leaflet-tooltip-right:before { left: 0; margin-left: -12px; border-right-color: #fff; } @media print { .leaflet-control { -webkit-print-color-adjust: exact; print-color-adjust: exact; } } </style>
+<style>
+/* Düzen: tam genişlik 3D sahne → koyu, taş-pirinç tonlu editoryal bölümler. Tek (koyu) tema, kliniğin siyah-altın kimliği. */
+:root {
+  --ink: #0f0e0d;        /* zemin */
+  --panel: #191715;      /* yüzey */
+  --line: #3a342e;       /* çizgi */
+  --stone: #e8e0d4;      /* metin */
+  --taupe: #a69886;      /* ikincil metin */
+  --gold: #c9a45c;       /* vurgu */
+  --gold-hi: #e7c98c;
+  --ok: #8fb08a; --now: #e3b35c;
+  --f-display: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --f-body: "Albert Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --gut: max(16px, env(safe-area-inset-left, 0px));
+  --gutr: max(16px, env(safe-area-inset-right, 0px));
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--ink); color: var(--stone); }
+body { margin: 0; font: 400 16px/1.6 var(--f-body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: var(--gold-hi); }
+:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; font-weight: 600; }
+.eyebrow { font: 500 12px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: var(--gut); padding-right: var(--gutr); }
+section { padding-block: clamp(56px, 9vw, 110px); border-top: 1px solid var(--line); }
+.sec-head { display: grid; gap: 14px; max-width: 62ch; margin-bottom: 36px; }
+.sec-head h2 { font: 600 clamp(28px, 4.2vw, 46px)/1.1 var(--f-display); letter-spacing: .02em; color: var(--stone); }
+.sec-head p { margin: 0; color: var(--taupe); }
+
+/* ---------- 3D sahne ---------- */
+#viewer { position: relative; height: min(92svh, 940px); min-height: 600px; background: #1b1a1f; overflow: hidden; }
+#canvas-wrap { position: absolute; inset: 0; }
+#canvas-wrap canvas { display: block; touch-action: none; }
+#loading { position: absolute; inset: 0; display: grid; place-items: center; font: 500 13px var(--f-mono); letter-spacing: .12em; color: var(--taupe); text-align: center; padding: 0 24px; transition: opacity .6s; pointer-events: none; }
+#viewer.ready #loading { opacity: 0; }
+.topbar { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  padding: calc(14px + env(safe-area-inset-top, 0px)) var(--gutr) 40px var(--gut);
+  background: linear-gradient(180deg, rgba(10,9,8,.78), rgba(10,9,8,0)); pointer-events: none; }
+.brand { display: flex; align-items: center; gap: 12px; pointer-events: auto; }
+.brand svg { width: 44px; height: 50px; flex: none; }
+.brand b { display: block; font: 600 22px/1 var(--f-display); letter-spacing: .08em; }
+.brand small { display: block; font: 500 11px/1.4 var(--f-mono); letter-spacing: .1em; color: var(--taupe); margin-top: 5px; text-transform: uppercase; }
+.status { pointer-events: auto; display: inline-flex; align-items: center; gap: 8px; font: 500 11px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
+  border: 1px solid rgba(227,179,92,.45); color: var(--now); background: rgba(15,14,13,.6); padding: 8px 10px; border-radius: 999px; white-space: nowrap; }
+.status i { width: 7px; height: 7px; border-radius: 50%; background: var(--now); box-shadow: 0 0 0 0 rgba(227,179,92,.6); animation: pulse 2s infinite; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(227,179,92,0); } 100% { box-shadow: 0 0 0 0 rgba(227,179,92,0); } }
+.hud { position: absolute; left: 0; right: 0; bottom: 0; display: grid; gap: 12px; padding: 60px var(--gutr) calc(16px + env(safe-area-inset-bottom, 0px)) var(--gut);
+  background: linear-gradient(0deg, rgba(10,9,8,.88) 30%, rgba(10,9,8,0)); pointer-events: none; }
+.hud > * { pointer-events: auto; }
+.hud-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 16px; align-items: end; }
+.card { max-width: 46ch; min-width: 0; }
+.card h1 { font: 600 clamp(26px, 3.6vw, 40px)/1.08 var(--f-display); letter-spacing: .03em; margin-top: 8px; }
+.card p { margin: 8px 0 0; color: #cbbfae; font-size: 15px; }
+.timeline { background: rgba(25,23,21,.82); border: 1px solid var(--line); border-radius: 10px; padding: 14px 14px 12px; backdrop-filter: blur(8px); min-width: 0; }
+.tl-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.tl-head b { font: 600 15px/1.3 var(--f-body); }
+#stage-state { font: 500 11px/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; padding: 5px 7px; border-radius: 4px; white-space: nowrap; }
+#stage-state[data-kind="done"] { color: var(--ok); background: rgba(143,176,138,.12); }
+#stage-state[data-kind="now"] { color: var(--now); background: rgba(227,179,92,.14); }
+#stage-state[data-kind="next"] { color: var(--taupe); background: rgba(166,152,134,.12); }
+.ticks { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 12px 0 4px; }
+.tick { height: 3px; background: var(--line); border-radius: 2px; transition: background .4s; }
+.tick.on { background: var(--gold); }
+.tick.cur { position: relative; }
+.tick.cur::after { content: "ŞU AN"; position: absolute; top: 7px; left: 0; font: 500 9px/1 var(--f-mono); letter-spacing: .1em; color: var(--now); }
+input[type=range]#stage { width: 100%; accent-color: var(--gold); margin: 14px 0 6px; }
+.tl-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { font: 500 13px/1 var(--f-body); color: var(--stone); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 9px 12px; cursor: pointer; }
+.btn:hover { border-color: var(--gold); }
+.btn.primary { background: var(--gold); color: #17130c; border-color: var(--gold); font-weight: 600; }
+.btn:disabled { opacity: .5; cursor: progress; }
+.stops { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.stops::-webkit-scrollbar { display: none; }
+.stop { flex: none; font: 500 13px/1 var(--f-body); color: #d8cdbd; background: rgba(25,23,21,.75); border: 1px solid var(--line); border-radius: 999px; padding: 9px 13px; cursor: pointer; }
+.stop[aria-pressed="true"] { color: #17130c; background: var(--gold-hi); border-color: var(--gold-hi); }
+.hint { font: 400 11px/1.4 var(--f-mono); color: var(--taupe); letter-spacing: .04em; }
+@media (max-width: 760px) {
+  #viewer { height: 92svh; min-height: 640px; }
+  .hud-row { grid-template-columns: minmax(0, 1fr); }
+  .card p { font-size: 14px; }
+  .status span { display: none; }
+}
+
+/* ---------- dönüşüm ---------- */
+.ba-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.ba-item { display: grid; gap: 10px; min-width: 0; }
+.ba { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 6px; background: var(--panel); --x: 50%; max-width: 100%; }
+.ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ba .after { clip-path: inset(0 0 0 var(--x)); }
+.ba::after { content: ""; position: absolute; top: 0; bottom: 0; left: var(--x); width: 2px; background: var(--gold-hi); transform: translateX(-1px); pointer-events: none; }
+.ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.ba .lbl { position: absolute; top: 10px; font: 500 10px/1 var(--f-mono); letter-spacing: .12em; padding: 5px 7px; background: rgba(15,14,13,.75); border-radius: 3px; pointer-events: none; }
+.ba .l1 { left: 10px; } .ba .l2 { right: 10px; color: var(--gold-hi); }
+.ba-item figcaption { font-size: 14px; color: var(--taupe); }
+.ba-item figcaption b { color: var(--stone); font-weight: 600; }
+figure { margin: 0; }
+.log { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 40px; }
+.log figure { display: grid; gap: 8px; min-width: 0; }
+.log img { aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; filter: saturate(.8); }
+.log figcaption { font: 400 12px/1.5 var(--f-mono); color: var(--taupe); }
+.steps { list-style: none; margin: 34px 0 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.steps li { padding: 14px 12px 0 0; display: grid; gap: 6px; font-size: 14px; min-width: 0; }
+.steps li span { font: 500 10px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--taupe); }
+.steps li.done span { color: var(--ok); } .steps li.now span { color: var(--now); }
+.steps li.now { border-top: 2px solid var(--now); margin-top: -1px; }
+@media (max-width: 860px) { .ba-grid, .log { grid-template-columns: minmax(0, 1fr); } .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; } }
+
+/* ---------- cephe ---------- */
+.facade { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.ow-frame { overflow-x: auto; background: #0a0909; border: 1px solid var(--line); border-radius: 6px; padding: 14px; }
+#oneway { width: 100%; height: auto; display: block; aspect-ratio: 2120 / 1000; }
+.door-row { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 18px; align-items: center; margin-top: 18px; }
+#door { width: 100%; height: auto; display: block; aspect-ratio: 1024 / 1188; border-radius: 4px; }
+.door-row p { margin: 0; color: #cbbfae; font-size: 15px; }
+.door-row b { color: var(--stone); }
+@media (max-width: 520px) { .door-row { grid-template-columns: minmax(0, 1fr); } }
+.spec { margin: 0; display: grid; gap: 0; }
+.spec div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.spec dt { font: 500 11px/1.6 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--taupe); }
+.spec dd { margin: 0; font-size: 15px; }
+.ow-note { margin-top: 12px; font: 400 12px/1.5 var(--f-mono); color: var(--taupe); }
+@media (max-width: 860px) { .facade { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- hizmetler ---------- */
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.svc h3 { font: 600 13px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); padding-bottom: 14px; border-bottom: 1px solid var(--gold); }
+.svc ul { list-style: none; margin: 0 0 24px; padding: 0; }
+.svc li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.svc li b { font-weight: 500; }
+.svc li small { font: 400 12px/1.6 var(--f-mono); color: var(--taupe); text-align: right; }
+@media (max-width: 760px) { .svc { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- mekanlar ---------- */
+.gal { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 14px; }
+.gal figure { position: relative; overflow: hidden; border-radius: 6px; min-width: 0; }
+.gal img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; transition: transform .8s; }
+.gal figure:hover img { transform: scale(1.03); }
+.gal figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 14px 12px; font: 500 12px/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; background: linear-gradient(0deg, rgba(10,9,8,.85), rgba(10,9,8,0)); }
+.g1 { grid-column: span 7; } .g2 { grid-column: span 5; } .g3, .g4, .g5 { grid-column: span 4; } .g6 { grid-column: span 6; } .g7 { grid-column: span 6; }
+.g2 img, .g1 img { aspect-ratio: 4 / 3; }
+@media (max-width: 760px) { .gal figure { grid-column: span 12; } }
+
+/* ---------- konum ---------- */
+.loc { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: stretch; }
+#map { min-height: 460px; border-radius: 6px; border: 1px solid var(--line);
+  background: #15161a repeating-linear-gradient(0deg, transparent 0 39px, #20222a 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, #20222a 39px 40px); }
+.leaflet-container { font: 400 13px/1.4 var(--f-body); background: #15161a; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: #1d1b19; color: var(--stone); }
+.leaflet-container a.leaflet-popup-close-button { color: var(--taupe); }
+.leaflet-control-attribution { background: rgba(15,14,13,.7) !important; color: var(--taupe); }
+.leaflet-control-attribution a { color: var(--taupe); }
+.pin { width: 34px; height: 38px; display: grid; place-items: center; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); font: 600 11px/1 var(--f-mono); }
+.pin.h { background: #e8e0d4; color: #1b1917; transform: scale(.78); }
+.pin.md { background: var(--gold); color: #14110b; font-family: var(--f-display); font-size: 12px; }
+.addr { display: grid; gap: 18px; align-content: start; }
+.addr h3 { font: 600 22px/1.25 var(--f-display); letter-spacing: .03em; }
+.addr p { margin: 0; color: #cbbfae; }
+.route { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; counter-reset: r; }
+.route li { counter-increment: r; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 8px; font-size: 15px; }
+.route li::before { content: counter(r); font: 500 12px/24px var(--f-mono); color: var(--gold); border: 1px solid var(--line); text-align: center; height: 24px; border-radius: 3px; }
+#places { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+#places li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.place { all: unset; cursor: pointer; display: grid; gap: 2px; min-width: 0; }
+.place:focus-visible { outline: 2px solid var(--gold-hi); }
+.pn { font-weight: 600; font-size: 15px; } .pa { font-size: 13px; color: var(--taupe); }
+.pd { font: 500 13px/1 var(--f-mono); color: var(--gold-hi); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pl { font-size: 13px; white-space: nowrap; }
+.fine { font: 400 11px/1.5 var(--f-mono); color: var(--taupe); }
+@media (max-width: 860px) { .loc { grid-template-columns: minmax(0, 1fr); } #map { min-height: 340px; } }
+
+footer { border-top: 1px solid var(--line); padding-block: 36px calc(36px + env(safe-area-inset-bottom, 0px)); }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: var(--taupe); font-size: 14px; }
+.foot b { font: 600 18px var(--f-display); color: var(--stone); letter-spacing: .08em; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+
+<div id="viewer">
+  <div id="canvas-wrap" aria-label="MD Clinic 3D modeli"></div>
+  <div id="loading">3D MODEL YÜKLENİYOR…</div>
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 44 50" aria-hidden="true"><polygon points="22,2 42,13.5 42,36.5 22,48 2,36.5 2,13.5" fill="#121110" stroke="#c9a45c" stroke-width="2.5"/><text x="22" y="30.5" text-anchor="middle" font-family="Cinzel, serif" font-weight="600" font-size="15" fill="#d8b56d">MD</text></svg>
+      <div><b>MD CLINIC</b><small>Radyoloji · Girişimsel Radyoloji</small></div>
+    </div>
+    <div class="status" title="Güncel inşaat aşaması"><i></i><span>Şantiye:&nbsp;</span>asma tavan + kapılar</div>
+  </header>
+  <div class="hud">
+    <div class="hud-row">
+      <div class="card" aria-live="polite">
+        <div class="eyebrow" id="stop-code">BİNA · KESİT</div>
+        <h1 id="stop-title">Genel bakış</h1>
+        <p id="stop-desc"></p>
+      </div>
+      <div class="timeline">
+        <div class="tl-head"><b id="stage-name">Cihazlar ve mobilya</b><span id="stage-state" data-kind="next">Açılış</span></div>
+        <label class="hint" for="stage">Şantiyeden açılışa: sürgüyü kaydırın</label>
+        <input id="stage" type="range" min="0" max="5" step="1" value="5">
+        <div class="ticks" aria-hidden="true"><i class="tick"></i><i class="tick"></i><i class="tick cur"></i><i class="tick"></i><i class="tick"></i><i class="tick"></i></div>
+        <div class="tl-btns" style="margin-top:14px">
+          <button class="btn primary" id="play" type="button">Dönüşümü oynat</button>
+          <button class="btn" id="now" type="button">Bugünkü durum</button>
+        </div>
+      </div>
+    </div>
+    <nav class="stops" aria-label="Kamera durakları">
+      <button class="stop" type="button" data-stop="genel">Genel</button>
+      <button class="stop" type="button" data-stop="cephe">Cephe</button>
+      <button class="stop" type="button" data-stop="giris">Merdiven</button>
+      <button class="stop" type="button" data-stop="resepsiyon">Karşılama</button>
+      <button class="stop" type="button" data-stop="bekleme">Bekleme</button>
+      <button class="stop" type="button" data-stop="koridor">Koridor</button>
+      <button class="stop" type="button" data-stop="d1">D. Odası 1</button>
+      <button class="stop" type="button" data-stop="m1">Muayene 1</button>
+      <button class="stop" type="button" data-stop="d2">D. Odası 2</button>
+      <button class="stop" type="button" data-stop="m2">Muayene 2</button>
+      <button class="stop" type="button" data-stop="wckapi">WC girişi</button>
+      <button class="stop" type="button" data-stop="wc">WC (üstten)</button>
+      <button class="stop" type="button" data-stop="plan">Kat planı</button>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <section id="donusum">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Dönüşüm</span>
+        <h2>Balgat'ta bir şantiyeden klinik çıkıyor</h2>
+        <p>Boş bir ticari kat; çelik merdiven, gazbeton bölmeler ve şimdi asma tavan. Çizgiyi kaydırarak bugünü ve hedeflenen sonucu karşılaştırın.</p>
+      </div>
+      <div class="ba-grid">
+        <figure class="ba-item">
+          <div class="ba"><img src="assets/santiye-salon.jpg" alt="Şantiye: boş salon, gazbeton bloklar"><img class="after" src="assets/render-resepsiyon-2.jpg" alt="Tasarım: MD logolu resepsiyon"><span class="lbl l1">ŞANTİYE</span><span class="lbl l2">TASARIM</span><input type="range" min="0" max="100" value="50" aria-label="Resepsiyon önce sonra"></div>
+          <figcaption><b>Lobi.</b> Ön cepheye bakan salon resepsiyon ve bekleme alanı oluyor.</figcaption>
+        </figure>
+        <figure class="ba-item">
+          <div class="ba"><img src="assets/santiye-duvar.jpg" alt="Şantiye: gazbeton oda duvarları ve iskele"><img class="after" src="assets/render-ultrason-2.jpg" alt="Tasarım: ultrason odası"><span class="lbl l1">ŞANTİYE</span><span class="lbl l2">TASARIM</span><input type="range" min="0" max="100" value="50" aria-label="Ultrason odası önce sonra"></div>
+          <figcaption><b>Ultrason odaları.</b> Gazbeton bölmeler muayene ve işlem odalarına dönüşüyor.</figcaption>
+        </figure>
+        <figure class="ba-item">
+          <div class="ba"><img src="assets/santiye-koridor.jpg" alt="Şantiye: koridor duvarı"><img class="after" src="assets/render-koridor.jpg" alt="Tasarım: koridor, ayna ve altıgen tablo"><span class="lbl l1">ŞANTİYE</span><span class="lbl l2">TASARIM</span><input type="range" min="0" max="100" value="50" aria-label="Koridor önce sonra"></div>
+          <figcaption><b>Koridor.</b> Gömme dolaplar, pirinç çerçeveli ayna, altıgen tablo.</figcaption>
+        </figure>
+      </div>
+      <ol class="steps">
+        <li class="done"><span>Tamamlandı</span>Kaba yapı ve çelik merdiven</li>
+        <li class="done"><span>Tamamlandı</span>Gazbeton bölmeler</li>
+        <li class="now"><span>Sürüyor</span>Asma tavan ve kapılar</li>
+        <li><span>Sırada</span>Zemin, boya, aydınlatma</li>
+        <li><span>Planlandı</span>Cephe giydirme, tabela</li>
+        <li><span>Açılış</span>Cihazlar ve mobilya</li>
+      </ol>
+      <div class="log">
+        <figure><img src="assets/santiye-cephe.jpg" alt="Dış cephe: eczane ve yanındaki giriş kapısı"><figcaption>Dış cephe · eczane ve yanındaki giriş</figcaption></figure>
+        <figure><img src="assets/santiye-merdiven.jpg" alt="Çelik merdivenin montajı"><figcaption>Zemin kat · çelik merdiven montajı</figcaption></figure>
+        <figure><img src="assets/santiye-ust-kat.jpg" alt="Üst kat: merdiven boşluğu ve gazbeton odalar"><figcaption>1. kat · merdiven boşluğu ve odalar</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="cephe">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Cephe giydirme</span>
+        <h2>Üst katın camı ve giriş kapısı</h2>
+        <p>Karşılama duvarındaki ışıklı altıgen düzen üst katın bütün camını kaplıyor. One-way vision folyo içeriden dışarıyı göstermeye devam ederken dışarıdan MD kimliğini okutuyor. Eczanenin yanındaki giriş kapısında aynı tonlarda bir ultrason görüntüsü var.</p>
+      </div>
+      <div class="facade">
+        <div>
+          <div class="ow-frame"><canvas id="oneway" width="2120" height="1000" role="img" aria-label="One-way vision cephe folyosu tasarım taslağı"></canvas></div>
+          <p class="ow-note">Üst kat · ön cephe camının tamamı · taslak, ölçüler sahada kesinleşir</p>
+          <div class="door-row">
+            <div class="ow-frame" style="padding:10px"><canvas id="door" width="1024" height="1188" role="img" aria-label="MD giriş kapısı one-way vision taslağı: ultrason görüntüsü"></canvas></div>
+            <p><b>MD giriş kapısı.</b> Eczanenin yanındaki açılır-kapanır çift kanat kapı; iki kanada bölünen one-way vision folyoda cephe ile aynı siyah-altın tonlarda bir ultrason taraması. Kapı açıldığında görüntü ortadan ikiye ayrılır.</p>
+          </div>
+        </div>
+        <dl class="spec">
+          <div><dt>Yüzey</dt><dd>1. kat ön cephe camının tamamı (≈ 6,6 × 3,1 m) ve MD giriş kapısı</dd></div>
+          <div><dt>Malzeme</dt><dd>One-way vision (delikli) folyo, dış yüzeye uygulama</dd></div>
+          <div><dt>Tema</dt><dd>Altıgen petek, ışıklı halkalar, ortada MD altıgeni</dd></div>
+          <div><dt>Renk</dt><dd>Antrasit zemin, pirinç-altın hatlar, taş rengi yazı</dd></div>
+          <div><dt>Kapı</dt><dd>Açılır-kapanır çift kanat, ultrason görüntülü folyo, pirinç kollar</dd></div>
+          <div><dt>Metin</dt><dd>MD altıgen logo · Radyoloji · Girişimsel Radyoloji · 1. kat</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="hizmetler">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Hizmetler</span>
+        <h2>Görüntüleme ve görüntü eşliğinde girişim</h2>
+        <p>Tanı aynı odada konuyor, gereken işlem aynı gün planlanabiliyor.</p>
+      </div>
+      <div class="svc">
+        <div>
+          <h3>Tanısal radyoloji</h3>
+          <ul>
+            <li><b>Genel ultrasonografi</b><small>Batın · Pelvik</small></li>
+            <li><b>Renkli Doppler</b><small>Arter · Ven</small></li>
+            <li><b>Tiroid ve boyun ultrasonu</b><small>Nodül takibi</small></li>
+            <li><b>Meme ultrasonu</b><small>Tarama · Takip</small></li>
+            <li><b>Obstetrik 3D/4D ultrason</b><small>Ultrason odası</small></li>
+            <li><b>Elastografi</b><small>Karaciğer · Tiroid</small></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Girişimsel radyoloji</h3>
+          <ul>
+            <li><b>Ultrason eşliğinde biyopsi</b><small>Tru-cut</small></li>
+            <li><b>Tiroid ince iğne aspirasyonu</b><small>İİAB</small></li>
+            <li><b>Meme biyopsisi</b><small>US eşliğinde</small></li>
+            <li><b>Kist ve apse drenajı</b><small>Perkütan</small></li>
+            <li><b>Tiroid nodülü ablasyonu</b><small>RF</small></li>
+            <li><b>Eklem ve yumuşak doku enjeksiyonları</b><small>US eşliğinde</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mekanlar">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Mekânlar</span>
+        <h2>Siyah, taş ve pirinç</h2>
+        <p>Tüm odalarda aynı altıgen zemin dili; sıcak spot ışık, buzlu cam sürgü kapılar.</p>
+      </div>
+      <div class="gal">
+        <figure class="g1"><img src="assets/render-resepsiyon-1.jpg" alt="Resepsiyon ve bekleme"><figcaption>Resepsiyon · bekleme</figcaption></figure>
+        <figure class="g2"><img src="assets/render-doktor-1.jpg" alt="Doktor odası"><figcaption>Doktor odası</figcaption></figure>
+        <figure class="g3"><img src="assets/render-ultrason-1.jpg" alt="Ultrason odası"><figcaption>Ultrason 1</figcaption></figure>
+        <figure class="g4"><img src="assets/render-ultrason-3.jpg" alt="Ultrason odası, sürgü kapı"><figcaption>Ultrason · sürgü kapı</figcaption></figure>
+        <figure class="g5"><img src="assets/render-3d4d.jpg" alt="3D/4D ultrason ekranı"><figcaption>3D/4D ekran</figcaption></figure>
+        <figure class="g6"><img src="assets/render-doktor-2.jpg" alt="Doktor odası, ışıklı dolap"><figcaption>Görüşme odası</figcaption></figure>
+        <figure class="g7"><img src="assets/render-resepsiyon-2.jpg" alt="Resepsiyon, hasta sıra ekranı"><figcaption>Hasta sıra ekranı</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="konum">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Konum · Çevre rehberi</span>
+        <h2>Memorial Ankara Hastanesi'nin yanında</h2>
+        <p>Balgat'ta; karşı şeritte Koru Ankara Hastanesi, birkaç dakika ötede Çukurambar ve Söğütözü.</p>
+      </div>
+      <div class="loc">
+        <div id="map" role="region" aria-label="Harita: MD Clinic ve çevredeki hastaneler"></div>
+        <div class="addr">
+          <h3>Nasıl gelinir</h3>
+          <ol class="route">
+            <li>Memorial Ankara Hastanesi'nin yanındaki binaya gelin.</li>
+            <li>Zemin kattaki eczanenin hemen yanındaki MD Clinic kapısından girin.</li>
+            <li>Merdivenle 1. kata çıkın; resepsiyon karşınızda.</li>
+          </ol>
+          <div>
+            <div class="eyebrow" style="margin-bottom:10px">Çevredeki hastaneler · kuş uçuşu</div>
+            <ul id="places"></ul>
+            <p class="fine" style="margin-top:10px">Mesafeler klinik konumundan düz çizgi olarak hesaplanır. Klinik işareti yaklaşıktır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><b>MD CLINIC</b><br>Radyoloji · Girişimsel Radyoloji</div>
+    <div>Balgat, Çankaya / Ankara<br>Memorial Ankara Hastanesi yanı</div>
+    <div>Randevu ve iletişim bilgileri<br>açılışla birlikte eklenecek</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script type="module" src="page.js"></script>
+</body>
+</html>
